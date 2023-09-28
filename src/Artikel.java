@@ -3,4 +3,5 @@ public class Artikel {
     private String judul;
     private String konten;
     private String idAuthor;
+
 }
