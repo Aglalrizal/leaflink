@@ -5,7 +5,7 @@ public class Kampanye {
     private String idKampanye;
     private String nama;
     private String deskripsi;
-    private List<User>volunteer = new ArrayList<>();
+    private List<Person>volunteer = new ArrayList<>();
     private String lokasi;
     private int targetPendanaan;
     private int sumbangan;

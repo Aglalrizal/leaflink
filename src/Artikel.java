@@ -2,19 +2,45 @@ public class Artikel {
     private String idArtikel;
     private String judul;
     private String konten;
-    private String idAuthor;
+    private Organisasi organisasi;
 
-    public Artikel(String idArtikel, String judul, String konten, String idAuthor) {
+    public Artikel(String idArtikel, Organisasi organisasi, String judul, String konten) {
         this.idArtikel = idArtikel;
         this.judul = judul;
         this.konten = konten;
-        this.idAuthor = idAuthor;
+        this.organisasi = organisasi;
     }
 
-    public Artikel(String idArtikel, String judul, String idAuthor) {
+    public Artikel(String idArtikel, Organisasi organisasi, String judul) {
         this.idArtikel = idArtikel;
         this.judul = judul;
-        this.idAuthor = idAuthor;
+        this.organisasi = organisasi;
     }
 
+    public String getIdArtikel() {
+        return idArtikel;
+    }
+
+    public String getJudul() {
+        return judul;
+    }
+
+    public String getKonten() {
+        return konten;
+    }
+
+    public Organisasi getAuthor(){
+        return organisasi;
+    }
+
+    public void setKonten(String konten) {
+        this.konten = konten;
+    }
+
+    public String toString(){
+        return  "UserId: "+getIdArtikel()+ "\n" +
+                "Author: "+getAuthor() + "\n" +
+                "Email: "+getJudul()+ "\n" +
+                "No hp: "+getKonten()+"\n";
+    }
 }
