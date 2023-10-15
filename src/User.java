@@ -1,8 +1,9 @@
-public class User {
-    private String userId;
-    private String nama;
-    private String email;
-    private String noHp;
-    private Dompet dompet = new Dompet();
+import java.util.ArrayList;
+import java.util.List;
 
+public class User extends People{
+    List<Kampanye> riwayatKampanye = new ArrayList<>();
+    public User(String userId, String nama, String email, String noHp, String password){
+        super(userId, nama, email, noHp, password);
+    }
 }

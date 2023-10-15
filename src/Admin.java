@@ -1,9 +1,12 @@
-public class Admin {
-    private String namaAdmin;
-    private Dompet totalSumbangan = new Dompet();
-    private Kampanye[] totalKampanye = new Kampanye[100];
-    private int jmlKampanye;
-    private User[] daftarUser = new User[100];
-    private DaftarArtikel daftarArtikel;
-    private Organisasi[] daftarOrganisasi = new Organisasi[100];
+import java.util.ArrayList;
+import java.util.List;
+
+public class Admin extends People {
+    List<Organisasi>listOrganisasi = new ArrayList<>();
+    List<User>listUser = new ArrayList<>();
+    List<Kampanye>listKampanye = new ArrayList<>();
+    private int totalSumbangan;
+    public Admin(String userId, String nama, String email, String noHp, String password){
+        super(userId, nama, email, noHp, password);
+    }
 }
