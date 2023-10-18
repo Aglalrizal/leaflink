@@ -9,6 +9,7 @@ public class Admin extends User {
     private int totalSumbangan;
     public Admin(String userId, String nama, String email, String noHp, String password){
         super(userId, nama, email, noHp, password);
+        this.role = "Admin";
     }
     public void addPerson(Person person){
         listPerson.add(person);

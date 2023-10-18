@@ -1,9 +1,11 @@
 public class User {
-    private String userId;
-    private String nama;
-    private String email;
-    private String noHp;
-    private String password;
+    protected String userId;
+    protected String username;
+    protected String nama;
+    protected String email;
+    protected String noHp;
+    protected String password;
+    protected String role;
 
     /**
      * inisialisasi objek user
@@ -13,8 +15,9 @@ public class User {
      * @param noHp no hp objek
      * @param password password
      */
-    public User(String userId, String nama, String email, String noHp, String password) {
+    public User(String userId, String username, String nama, String email, String noHp, String password) {
         this.userId = userId;
+        this.getUsername = username;
         this.nama = nama;
         this.email = email;
         this.noHp = noHp;
@@ -25,6 +28,9 @@ public class User {
         return userId;
     }
 
+    public String getUsername() {
+        return username;
+    }
     public String getNama() {
         return nama;
     }
