@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Person extends User {
-    List<Kampanye> riwayatKampanye = new ArrayList<>();
+    private List<Kampanye> riwayatKampanye = new ArrayList<>();
     public Person(){
         super();
         this.role = "Person";
@@ -11,5 +11,17 @@ public class Person extends User {
         super(username, nama, email, noHp, password);
         this.role = "Person";
     }
+    public void addRiwayatKampanye(Kampanye kampanye){
+        this.riwayatKampanye.add(kampanye);
+    }
+    public String showRiwayatKampanye(){
 
+    }
+    public String toString() {
+        return "UserId: "+getUserId()+ "\n" +
+                "Nama: "+ getNama()+ "\n" +
+                "Email: "+getEmail()+ "\n" +
+                "No hp: "+getNoHp()+
+                "\nRiwayat kampanye yang diikuti: "+showRiwayatKampanye();
+    }
 }
