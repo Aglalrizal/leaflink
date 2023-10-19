@@ -14,14 +14,13 @@ public class Person extends User {
     public void addRiwayatKampanye(Kampanye kampanye){
         this.riwayatKampanye.add(kampanye);
     }
-    public String showRiwayatKampanye(){
+    public void showRiwayatKampanye(){
 
     }
     public String toString() {
         return "UserId: "+getUserId()+ "\n" +
                 "Nama: "+ getNama()+ "\n" +
                 "Email: "+getEmail()+ "\n" +
-                "No hp: "+getNoHp()+
-                "\nRiwayat kampanye yang diikuti: "+showRiwayatKampanye();
+                "No hp: "+getNoHp();
     }
 }
