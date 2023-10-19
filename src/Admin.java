@@ -7,9 +7,12 @@ public class Admin extends User {
     List<Kampanye>listKampanye = new ArrayList<>();
     List<Artikel>listArtikel = new ArrayList<>();
     private int totalSumbangan;
-    public Admin(String userId, String nama, String email, String noHp, String password){
-        super(userId, nama, email, noHp, password);
+    public Admin(){
+        super();
         this.role = "Admin";
+        System.out.println("Akun berhasil dibuat");
+        System.out.println(this.toString());
+
     }
     public void addPerson(Person person){
         listPerson.add(person);
@@ -31,5 +34,9 @@ public class Admin extends User {
              ) {
             System.out.println(item.toString());
         }
+    }
+    public String toString(){
+        return super.toString() +
+                "Role: " + this.role;
     }
 }

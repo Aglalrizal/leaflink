@@ -1,20 +1,26 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Organisasi extends User {
     private String deskripsi;
     private String namaKetua;
     private List<Kampanye> listKampanye = new ArrayList<>();
     private List<Artikel> listArtikel = new ArrayList<>();
-    public Organisasi(String userId, String nama, String email, String noHp, String password, String deskripsi){
-        super(userId, nama, email, noHp, password);
-        this.deskripsi = deskripsi;
+    public Organisasi(){
+        super();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nama ketua: ");
+        this.namaKetua = scanner.nextLine();
+        System.out.println("Deskripsi: ");
+        this.deskripsi = scanner.nextLine();
         this.role = "Organisasi";
     }
-    public Organisasi(String userId, String nama, String email, String noHp, String password){
-        super(userId, nama, email, noHp, password);
+    public Organisasi(String nama, String username, String email, String noHp, String password, String namaKetua, String deskripsi){
+        super(nama, username, email, noHp, password);
+        this.namaKetua = namaKetua;
+        this.deskripsi = deskripsi;
     }
-
     public String getDeskripsi() {
         return deskripsi;
     }

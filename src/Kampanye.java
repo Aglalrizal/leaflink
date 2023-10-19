@@ -9,5 +9,4 @@ public class Kampanye {
     private String lokasi;
     private int targetPendanaan;
     private int sumbangan;
-
 }

@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class User {
     protected String userId;
     protected String username;
@@ -6,24 +8,29 @@ public class User {
     protected String noHp;
     protected String password;
     protected String role;
-
-    /**
-     * inisialisasi objek user
-     * @param userId unik
-     * @param nama nama objek
-     * @param email email obje
-     * @param noHp no hp objek
-     * @param password password
-     */
-    public User(String userId, String username, String nama, String email, String noHp, String password) {
-        this.userId = userId;
-        this.getUsername = username;
+    public static int idIndex = 0;
+    public User() {
+        setUserId();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Username: ");
+        this.username = scanner.nextLine();
+        System.out.println("Nama: ");
+        this.nama = scanner.nextLine();
+        System.out.println("Email: ");
+        this.email = scanner.nextLine();
+        System.out.println("noHp: ");
+        this.noHp = scanner.nextLine();
+        System.out.println("Password: ");
+        this.password = scanner.nextLine();
+    }
+    public User(String nama, String username, String email, String noHp, String password) {
+        setUserId();
         this.nama = nama;
+        this.username = username;
         this.email = email;
         this.noHp = noHp;
         this.password = password;
     }
-
     public String getUserId() {
         return userId;
     }
@@ -45,6 +52,10 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+    public void setUserId(){
+        idIndex++;
+        this.userId = "lflk"+idIndex;
     }
     @Override
     public String toString() {

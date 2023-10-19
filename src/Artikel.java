@@ -1,22 +1,33 @@
+import java.util.Scanner;
+
 public class Artikel {
     private String idArtikel;
     private String judul;
     private String konten;
     private Organisasi organisasi;
+    public static int indexArtikel = 0;
 
-    public Artikel(String idArtikel, Organisasi organisasi, String judul, String konten) {
-        this.idArtikel = idArtikel;
+    public Artikel(Organisasi organisasi) {
+        Scanner scanner = new Scanner(System.in);
+        setIdArtikel();
+        System.out.println("Judul: ");
+        this.judul = scanner.nextLine();
+        System.out.println("Judul: ");
+        this.konten = scanner.nextLine();;
+        this.organisasi = organisasi;
+    }
+    public Artikel(Organisasi organisasi, String judul, String konten) {
+        setIdArtikel();
         this.judul = judul;
         this.konten = konten;
         this.organisasi = organisasi;
     }
 
-    public Artikel(String idArtikel, Organisasi organisasi, String judul) {
-        this.idArtikel = idArtikel;
+    public Artikel(Organisasi organisasi, String judul) {
+        setIdArtikel();
         this.judul = judul;
         this.organisasi = organisasi;
     }
-
     public String getIdArtikel() {
         return idArtikel;
     }
@@ -37,10 +48,16 @@ public class Artikel {
         this.konten = konten;
     }
 
+
+    private void setIdArtikel(){
+        indexArtikel++;
+        this.idArtikel="artikel"+indexArtikel;
+    }
+
     public String toString(){
         return  "UserId: "+getIdArtikel()+ "\n" +
                 "Author: "+getAuthor() + "\n" +
-                "Email: "+getJudul()+ "\n" +
-                "No hp: "+getKonten()+"\n";
+                "Judul: "+getJudul()+ "\n" +
+                "Konten: "+getKonten()+"\n";
     }
 }
