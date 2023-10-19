@@ -16,6 +16,7 @@ public class Kampanye {
         this.deskripsi = deskripsi;
         this.lokasi = lokasi;
         this.targetPendanaan = targetPendanaan;
+        this.sumbangan = 0;
     }
 
     public void tambahKampanye() {
