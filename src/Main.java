@@ -5,28 +5,20 @@ import static java.lang.System.exit;
 public class Main {
     public static void main(String[] args) {
         UserDatabase app = new UserDatabase();
-        int tmp = 99;
-        Scanner scanner = new Scanner(System.in);
-        while (tmp != 0){
-            System.out.println("Haloo \n1. Login \n2. Sign Up \n3.Exit");
-            tmp=scanner.nextInt();
-            if (tmp == 1){
-                app.login();
-            }else if (tmp == 2){
-                app.register();
-            }else if (tmp == 3){
-                exit(0);
-            }
-        }
+
+    }
+    public static void menu(){
+
     }
     public static void menuUser(){
         Scanner scanner = new Scanner(System.in);
         int tmp = 1;
-        while(tmp!=4){
+        while(tmp!=0){
             System.out.println("======Menu====="+
             "\n1. Daftar Kampanye"+
             "\n2. Baca Artikel"+
-            "\n3. Riwayat"+"\n4. Keluar");
+            "\n3. Riwayat"+"\n4. Keluar\nJawaban: ");
+            tmp=scanner.nextInt();
             if (tmp == 1){
                 //app.showKampanye();
             } else if (tmp==2) {
@@ -48,7 +40,8 @@ public class Main {
                     "\n2. Daftar Artikel"+
                     "\n3. Daftar Organisasi"+
                     "\n4. Daftar User"+
-                    "\n5. Keluar");
+                    "\n5. Keluar\nJawaban: ");
+            tmp=scanner.nextInt();
             if (tmp == 1){
                 //menampilkan daftar Kampanye
             } else if (tmp==2) {
@@ -74,7 +67,8 @@ public class Main {
                     "\n4. Daftar artikel yang dibuat" +
                     "\n5. Buat kampanye" +
                     "\n6. Buat Artikel" +
-                    "\n7. Keluar");
+                    "\n7. Keluar\nJawaban: ");
+            tmp=scanner.nextInt();
             if (tmp == 1){
                 //app.showKampanye();
             } else if (tmp==2) {

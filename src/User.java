@@ -53,6 +53,11 @@ public class User {
     public String getPassword() {
         return password;
     }
+
+    public String getRole() {
+        return role;
+    }
+
     public void setUserId(){
         idIndex++;
         this.userId = "lflk"+idIndex;
